@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Staff Dashboard | CampusBites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">Campus<span>Bites</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="seats.html">Seats</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Staff Dashboard</h1>
+    <p>Update food stock, seat capacity and manage bookings.</p>
+  </section>
+
+  <main class="container">
+
+    <!-- LOGIN BOX (shown first) -->
+    <section id="loginBox" class="form-card login-box">
+      <h3>Staff Login</h3>
+      <p class="muted">Authorised cafeteria staff only.</p>
+      <form onsubmit="return false;">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter staff password">
+        <button type="button" class="btn" onclick="login()">Login</button>
+      </form>
+      <div id="loginMsg"></div>
+    </section>
+
+    <!-- DASHBOARD (hidden until login) -->
+    <div id="dashboard" style="display:none;">
+
+      <div class="row staff-section">
+        <h2>Welcome, Staff</h2>
+        <button class="btn btn-light" onclick="logout()">Logout</button>
+      </div>
+
+      <section class="form-card staff-section">
+        <h3>1. Food Stock</h3>
+        <p class="muted">Change a quantity and click Update. A quantity of 0 shows as Sold Out on the Food page.</p>
+        <div id="stockTable" class="table-wrap"></div>
+        <div id="stockMsg"></div>
+      </section>
+
+      <section class="form-card staff-section">
+        <h3>2. Seat Capacity</h3>
+        <p class="muted">Seats available in each time slot: <strong id="currentSeats">-</strong></p>
+        <label for="totalSeats">New number of seats per slot</label>
+        <input type="number" id="totalSeats" min="10" max="500">
+        <button class="btn" onclick="updateSeats()">Update Seats</button>
+        <div id="seatMsg"></div>
+      </section>
+
+      <section class="form-card staff-section">
+        <h3>3. Bookings</h3>
+        <label for="bookingDate">Select Date</label>
+        <input type="date" id="bookingDate" onchange="loadBookings()">
+        <div id="bookingTable" class="table-wrap"></div>
+        <div id="bookingMsg"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>CampusBites</h4>
+        <p>Live food and seat availability for your college cafeteria.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="food.html">Food</a>
+        <a href="seats.html">Seats</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+      <div>
+        <h4>Open Hours</h4>
+        <p>Mon - Sat: 7:30 AM - 5:30 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 CampusBites &middot; College Cafeteria &middot; Prices in &#8377;</p>
+  </footer>
+
+  <script src="api.js"></script>
+  <script src="staff.js"></script>
+</body>
+</html>

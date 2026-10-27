@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback | CampusBites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">Campus<span>Bites</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="seats.html">Seats</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>We'd Love Your Feedback</h1>
+    <p>Help us serve you better.</p>
+  </section>
+
+  <main class="container narrow">
+    <section class="form-card">
+      <h3>Submit Feedback</h3>
+      <p class="muted">All fields are required.</p>
+
+      <form>
+        <label for="studentName">Name</label>
+        <input type="text" id="studentName" placeholder="Enter your name">
+
+        <label for="mobile">Mobile Number</label>
+        <input type="text" id="mobile" placeholder="10-digit mobile number">
+
+        <label for="category">Feedback Category</label>
+        <select id="category">
+          <option value="">-- Select --</option>
+          <option>Food Quality</option>
+          <option>Hygiene</option>
+          <option>Pricing</option>
+          <option>Availability</option>
+          <option>Other</option>
+        </select>
+
+        <label for="comment">Comments</label>
+        <textarea id="comment" rows="4" placeholder="Tell us more..."></textarea>
+
+        <button type="button" class="btn" onclick="submitFeedback()">Submit Feedback</button>
+        <button type="button" class="btn btn-light" onclick="viewFeedback()">View Saved Feedback</button>
+      </form>
+
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>CampusBites</h4>
+        <p>Live food and seat availability for your college cafeteria.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="food.html">Food</a>
+        <a href="seats.html">Seats</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="staff.html">Staff Login</a>
+      </div>
+      <div>
+        <h4>Open Hours</h4>
+        <p>Mon - Sat: 7:30 AM - 5:30 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 CampusBites &middot; College Cafeteria &middot; Prices in &#8377;</p>
+  </footer>
+
+  <script src="feedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food | CampusBites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">Campus<span>Bites</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food.html" class="active">Food</a></li>
+        <li><a href="seats.html">Seats</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Menu and Live Availability</h1>
+    <p>Stock updates automatically every 10 seconds.</p>
+  </section>
+
+  <main class="container">
+    <div class="filters">
+      <div>
+        <label for="category">Category</label>
+        <select id="category" onchange="showItems()">
+          <option>All</option>
+          <option>Meals</option>
+          <option>Tiffin</option>
+          <option>Snacks</option>
+          <option>Beverages</option>
+        </select>
+      </div>
+      <div>
+        <label for="status">Status</label>
+        <select id="status" onchange="showItems()">
+          <option>All</option>
+          <option>Available</option>
+          <option>Sold Out</option>
+        </select>
+      </div>
+      <button class="btn" onclick="loadItems()">Refresh Now</button>
+    </div>
+
+    <div id="result"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>CampusBites</h4>
+        <p>Live food and seat availability for your college cafeteria.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="food.html">Food</a>
+        <a href="seats.html">Seats</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+      <div>
+        <h4>Open Hours</h4>
+        <p>Mon - Sat: 7:30 AM - 5:30 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 CampusBites &middot; College Cafeteria &middot; Prices in &#8377;</p>
+  </footer>
+
+  <script src="api.js"></script>
+  <script src="food.js"></script>
+</body>
+</html>

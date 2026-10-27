@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<timings>
+  <counter id="C01">
+    <name>Main Meals Counter</name>
+    <location>Ground Floor</location>
+    <hours>11:30 AM - 3:00 PM</hours>
+    <contact>9876500001</contact>
+  </counter>
+  <counter id="C02">
+    <name>Tiffin Counter</name>
+    <location>Ground Floor</location>
+    <hours>7:30 AM - 10:30 AM</hours>
+    <contact>9876500002</contact>
+  </counter>
+  <counter id="C03">
+    <name>Snacks Counter</name>
+    <location>First Floor</location>
+    <hours>10:00 AM - 5:00 PM</hours>
+    <contact>9876500003</contact>
+  </counter>
+  <counter id="C04">
+    <name>Juice and Beverages</name>
+    <location>Courtyard</location>
+    <hours>9:00 AM - 5:30 PM</hours>
+    <contact>9876500004</contact>
+  </counter>
+</timings>
